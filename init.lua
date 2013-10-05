@@ -27,8 +27,8 @@ local function lua_loader (main, luarequire)
       end
       -- otherwise, try to load it as an npm module in this path, using the default starting points
       for _,loadstring in ipairs({
-        prefix .. "node_modules." .. module .. "." .. "init",
-        prefix .. "node_modules." .. module .. "." .. module
+        prefix .. "vendor." .. module .. "." .. "init",
+        prefix .. "vendor." .. module .. "." .. module
       }) do
         if callrequire(loadstring) then return true end
       end
@@ -50,7 +50,7 @@ local function lua_loader (main, luarequire)
       for dir in string.gmatch(loaddir, "[^%.]+") do
         if path then path = path .. "." .. dir
         else path = dir end
-        if dir ~= "node_modules" then
+        if dir ~= "vendor" then
           table.insert(paths, 1, path)
         end
       end
