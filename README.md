@@ -35,4 +35,4 @@ log({text = "Hello, world!"})
 - Doesn't read the `bower.json`. So won't respect the `main` entry in there. Tries to load `./init.lua` or else `./<package name>.lua` and that's it.
 
 ## License
-[GNU Lesser General Public License (LGPL)](http://www.gnu.org/licenses/lgpl-3.0.txt)
+[LGPL+](https://github.com/wscherphof/lua-loader/blob/master/LICENSE.md)
