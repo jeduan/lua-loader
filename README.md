@@ -9,7 +9,7 @@ Download and install [Node.js](http://nodejs.org/download/). Then you have `npm`
 Now do `npm install -g bower`
 
 ### 1. Install
-In the root of your project, `bower install lua-loader`
+In the root of your project, `bower install --save require`
 
 ### 2. Initialise
 At the start of the main lua file in your project, enable lua-loader as follows:
