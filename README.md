@@ -1,6 +1,6 @@
 # lua-loader
 
-Make require() in lua to load lua [npm](http://npmjs.org) packages as lua modules
+Make require() in lua to load lua [bower](http://bower.io) components as lua modules
 
 ## Usage
 
@@ -14,7 +14,7 @@ In the root of your project, `bower install --save require`
 ### 2. Initialise
 At the start of the main lua file in your project, enable lua-loader as follows:
 ```lua
-require("vendor.lua-loader.init")(function() end)
+require("vendor.require.index")(function() end)
 ```
 (It's initialised a bit magically with a dummy function that will point it to where the root of the project is.
 Don't worry, just type it as above, and aftwerwards everything will look just normal)
@@ -32,7 +32,7 @@ log({text = "Hello, world!"})
 ```
 
 ## Limitations
-- Doesn't read the `bower.json`. So won't respect the `main` entry in there. Tries to load `./init.lua` or else `./<package name>.lua` and that's it.
+- Doesn't read the `bower.json`. So won't respect the `main` entry in there. Tries to load `./index.lua` or else `./<package name>.lua` and that's it.
 
 ## License
 [LGPL+](https://github.com/wscherphof/lua-loader/blob/master/LICENSE.md)

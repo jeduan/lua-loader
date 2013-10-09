@@ -21,13 +21,13 @@ local function lua_loader (main, luarequire)
       -- try to load it as a local module in this path
       for _,loadstring in ipairs({
         prefix .. module,
-        prefix .. module .. ".init"
+        prefix .. module .. ".index"
       }) do
         if callrequire(loadstring) then return true end
       end
       -- otherwise, try to load it as an npm module in this path, using the default starting points
       for _,loadstring in ipairs({
-        prefix .. "vendor." .. module .. "." .. "init",
+        prefix .. "vendor." .. module .. "." .. "index",
         prefix .. "vendor." .. module .. "." .. module
       }) do
         if callrequire(loadstring) then return true end
